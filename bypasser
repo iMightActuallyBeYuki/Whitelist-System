@@ -1,1 +1,96 @@
+-- Made By Yukii --
 
+local Bypasser = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local bypassbutton = Instance.new("TextButton")
+local x = Instance.new("TextButton")
+local label = Instance.new("TextLabel")
+local Username = Instance.new("TextBox")
+local Userid = Instance.new("TextBox")
+
+Bypasser.Name = "Bypasser"
+Bypasser.Parent = game.CoreGui
+
+frame.Name = "frame"
+frame.Parent = Bypasser
+frame.Active = true
+frame.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+frame.Draggable = true
+frame.Position = UDim2.new(0.244416878, -124, 0.399284869, -17)
+frame.Size = UDim2.new(0, 425, 0, 198)
+
+bypassbutton.Name = "bypassbutton"
+bypassbutton.Parent = frame
+bypassbutton.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+bypassbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bypassbutton.Position = UDim2.new(0.788700879, 0, 0.767676711, 0)
+bypassbutton.Size = UDim2.new(0, 83, 0, 39)
+bypassbutton.Font = Enum.Font.Kalam
+bypassbutton.Text = "Bypass"
+bypassbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+bypassbutton.TextScaled = true
+bypassbutton.TextSize = 14.000
+bypassbutton.TextWrapped = true
+bypassbutton.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Name = Username.Text
+    game.Players.LocalPlayer.UserId = Userid.Text
+end)
+
+x.Name = "x"
+x.Parent = frame
+x.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+x.BorderColor3 = Color3.fromRGB(0, 0, 0)
+x.Position = UDim2.new(0.917647064, 0, 0, 0)
+x.Size = UDim2.new(0, 35, 0, 35)
+x.Font = Enum.Font.Kalam
+x.Text = "X"
+x.TextColor3 = Color3.fromRGB(55, 55, 55)
+x.TextScaled = true
+x.TextSize = 14.000
+x.TextWrapped = true
+x.MouseButton1Down:connect(function()
+    game:GetService("CoreGui").Bypasser:Destroy()
+end)
+
+label.Name = "label"
+label.Parent = frame
+label.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+label.BorderSizePixel = 0
+label.Size = UDim2.new(0, 389, 0, 50)
+label.Font = Enum.Font.Kalam
+label.Text = "Yukii's Whitelist Bypasser"
+label.TextColor3 = Color3.fromRGB(170, 0, 255)
+label.TextScaled = true
+label.TextSize = 23.000
+label.TextWrapped = true
+
+Username.Name = "Username"
+Username.Parent = frame
+Username.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Username.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Username.Position = UDim2.new(0.26352942, 0, 0.25252524, 0)
+Username.Size = UDim2.new(0, 200, 0, 50)
+Username.Font = Enum.Font.Kalam
+Username.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Username.PlaceholderText = "Full Username"
+Username.Text = ""
+Username.TextColor3 = Color3.fromRGB(155, 155, 155)
+Username.TextScaled = true
+Username.TextSize = 14.000
+Username.TextWrapped = true
+
+Userid.Name = "Userid"
+Userid.Parent = frame
+Userid.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Userid.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Userid.Position = UDim2.new(0.26352942, 0, 0.545454502, 0)
+Userid.Size = UDim2.new(0, 200, 0, 50)
+Userid.Font = Enum.Font.Kalam
+Userid.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+Userid.PlaceholderText = "User ID"
+Userid.Text = ""
+Userid.TextColor3 = Color3.fromRGB(155, 155, 155)
+Userid.TextScaled = true
+Userid.TextSize = 14.000
+Userid.TextWrapped = true
